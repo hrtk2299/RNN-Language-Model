@@ -1,0 +1,34 @@
+# _*_ coding: utf-8 _*_
+* RNN Language Model
+
+** Requirements
+ - python 3.x
+ - chainer 3.x
+
+** Usage
+*** #1
+#+BEGIN_SRC bash
+python create_wordidmap.py [text file]
+ -> output 2 textfile all-sentences.txt, all-words.txt
+#+END_SRC
+
+*** #2
+#+BEGIN_SRC bash
+python rnn_laguage_model.py all-sentences.txt
+ -> output model file rnnlm.npz
+#+END_SRC
+
+*** #3
+#+BEGIN_SRC bash
+python rnnlm_gentext.py rnnlm.npz all-words.txt
+#+END_SRC
+
+** Example
+#+BEGIN_SRC bash
+python rnnlm_gentext.py rnnlm.npz all-words.txt
+>> i
+
+>> the
+
+>> this
+#+END_SRC
